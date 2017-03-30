@@ -1,7 +1,7 @@
 default: &default
   endpoint: 'https://acme-v01.api.letsencrypt.org/'
-  email: 'clairedv@hotmail.com'
-  domain: "www.washin5challenge.com"
+  email: 'fanniojerome@free.fr'
+  domain: "https://washinfive.herokuapp.com"
 
   # in Rails.root, path to private key
   private_key: 'key/keyfile.pem'
@@ -32,3 +32,4 @@ test:
   # if 'cert_name' is set, the keys are saved with this name, if not the first string from key 'domain' will be used
   cert_name: 'test'
   <<: *default
+
