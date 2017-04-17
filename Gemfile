@@ -8,6 +8,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-plugin'
 end
 
+
 gem 'omniauth-facebook'
 gem 'cloudinary', '1.1.7'
 gem 'figaro'
@@ -62,6 +63,10 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
+  gem 'capistrano', '~> 3.6'
+  gem 'capistrano-rails', '~> 1.1'
+  gem 'capistrano-rvm', '~> 0.1.2'
+  gem 'capistrano3-puma', github: "seuros/capistrano-puma"
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring

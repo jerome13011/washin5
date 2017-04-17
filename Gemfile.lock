@@ -6,6 +6,15 @@ GIT
       cloudinary (~> 1.1.0)
       rails (>= 3.2)
 
+GIT
+  remote: https://github.com/seuros/capistrano-puma.git
+  revision: 1d7cca2e431c23943ebcde19588169ed12025833
+  specs:
+    capistrano3-puma (3.1.0)
+      capistrano (~> 3.7)
+      capistrano-bundler
+      puma (~> 3.4)
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -50,6 +59,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    airbrussh (1.2.0)
+      sshkit (>= 1.6.1, != 1.7.0)
     arel (7.1.4)
     autoprefixer-rails (6.7.3)
       execjs
@@ -67,6 +78,20 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.3)
     byebug (9.0.6)
+    capistrano (3.8.0)
+      airbrussh (>= 1.0.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (>= 1.9.0)
+    capistrano-bundler (1.2.0)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2)
+    capistrano-rails (1.2.3)
+      capistrano (~> 3.1)
+      capistrano-bundler (~> 1.1)
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
     cloudinary (1.1.7)
       aws_cf_signer
       rest-client
@@ -142,6 +167,9 @@ GEM
     multi_json (1.12.1)
     multi_xml (0.6.0)
     multipart-post (2.0.0)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (4.1.0)
     netrc (0.11.0)
     nio4r (1.2.1)
     nokogiri (1.7.0.1)
@@ -236,6 +264,9 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    sshkit (1.13.1)
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.6)
@@ -271,6 +302,10 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass
   byebug
+  capistrano (~> 3.6)
+  capistrano-rails (~> 1.1)
+  capistrano-rvm (~> 0.1.2)
+  capistrano3-puma!
   cloudinary (= 1.1.7)
   coffee-rails (~> 4.2)
   devise
